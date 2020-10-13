@@ -1,0 +1,134 @@
+@font-face {
+    font-family: lil;
+    src: url("../Fonts/lil.ttf");
+  }
+  
+
+
+.container_2
+{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+    height: 90vh;
+    flex-direction: column;
+}
+
+.profile_container{
+ display: flex;
+ align-items: center;
+ color: white;
+ width: 50vw;
+ font-family: Courier New;
+ width: 51vw;
+}
+
+.container_2 h2{
+    font-size: 3vw;
+    text-align: justify;
+    color: white;
+    font-family: "lil";
+
+}
+
+.profile_container h3 {
+    font-size: medium;
+    margin-left: 3vw;
+    text-align: justify;
+}
+
+
+.image_profile_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+.image_profile_container img{
+    width: 4vw;
+}
+.expertise_container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vh;
+}
+
+
+
+@keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-webkit-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-moz-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-o-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  
+  .bar{
+    background-color: #ffffff;
+    padding: 2px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    width: 60vw;
+    margin-top: auto;
+    height: 3vh;
+    margin-bottom: auto;
+    margin-left: 2vw;
+  }
+
+  .bar::before{
+    content:  attr(data-skill);
+    background-color: #f3b0ff;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+  }
+  
+  .bar.front::before{
+    background-color: #ffcc33;
+  }
+  .bar.back::before{
+    background-color: #a6cfe3;
+  }
+  
+  .bar.learning::before{
+    width: calc(20% - 10px);
+  }
+  .bar.basic::before{
+    width: calc(40% - 10px);
+  }
+  .bar.intermediate::before{
+    width: calc(60% - 10px);
+    background-color: orange;
+
+  }
+  .bar.advanced::before{
+    width: calc(80% - 10px);
+    background-color: green;
+  }
+  .bar.expert::before{
+    width: calc(100% - 10px);
+  }
+  
